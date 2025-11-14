@@ -23,7 +23,7 @@ class GestorEstudiantes:
             print("Conectado a la base de datos:", cursor.fetchone()[0])
 
         except Exception as e:
-            print("❌ Error al conectar:", e)
+            print(" Error al conectar:", e)
             raise
 
     def consultar_estudiantes(self):
@@ -36,7 +36,7 @@ class GestorEstudiantes:
                 print(f"{row.IDEstudiante}\t{row.NombreEstudiante}\t{row.ApellidoEstudiante}\t{row.Email}\t{row.Telefono}")
             print("\n=================================\n")
         except Exception as e:
-            print("❌ Error al consultar:", e)
+            print(" Error al consultar:", e)
 
     def insertar_estudiante(self):
         try:
@@ -62,10 +62,10 @@ class GestorEstudiantes:
                 print("\n✔ Inserción verificada. Registro encontrado:")
                 print(f"{row.IDEstudiante}\t{row.NombreEstudiante}\t{row.ApellidoEstudiante}\t{row.Email}\t{row.Telefono}")
             else:
-                print("\n⚠️ No se encontró el registro tras el INSERT.")
+                print("\n No se encontró el registro tras el INSERT.")
 
         except Exception as e:
-            print("❌ Error al insertar:", e)
+            print(" Error al insertar:", e)
 
     def actualizar_email(self):
         try:
@@ -77,7 +77,7 @@ class GestorEstudiantes:
             self.conexion.commit()
             print("\n✔ Registro actualizado correctamente.")
         except Exception as e:
-            print("❌ Error al actualizar:", e)
+            print(" Error al actualizar:", e)
 
     def eliminar_estudiante(self):
         try:
@@ -88,7 +88,7 @@ class GestorEstudiantes:
             self.conexion.commit()
             print("\n✔ Registro eliminado correctamente.")
         except Exception as e:
-            print("❌ Error al eliminar:", e)
+            print(" Error al eliminar:", e)
 
     def ejecutar_menu(self):
         while True:
@@ -111,10 +111,10 @@ class GestorEstudiantes:
             elif opcion == "4":
                 self.eliminar_estudiante()
             elif opcion == "5":
-                print("\n👋 Saliendo...\n")
+                print("\n Saliendo...\n")
                 break
             else:
-                print("\n❌ Opción no válida.\n")
+                print("\n Opción no válida.\n")
 
 if __name__ == "__main__":
     gestor = GestorEstudiantes()
