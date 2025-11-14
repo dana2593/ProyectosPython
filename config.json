@@ -1,0 +1,7 @@
+{
+    "name_server": "localhost\\SQLEXPRESS",
+    "database": "UDEMYTEST1",
+    "username": "pythonconsultor",
+    "password": "UDLA",
+    "odbc_driver": "ODBC Driver 17 for SQL Server"
+}
